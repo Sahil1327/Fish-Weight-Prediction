@@ -2,13 +2,16 @@
 
 This project implements a simple web application for predicting the weight of a fish based on its species and physical measurements using a trained machine learning model. The web application is built using Flask for the backend and HTML/CSS for the frontend.
 
-Getting Started
-Prerequisites
+# Getting Started
+
+## Prerequisites
+
 Python 3.x
 Flask (pip install flask)
 pandas (pip install pandas)
 scikit-learn (pip install scikit-learn)
-Installation
+
+## Installation
 Clone the repository or download the code.
 
 Install the required Python packages by running the following command:
@@ -16,7 +19,9 @@ Install the required Python packages by running the following command:
 bash
 Copy code
 pip install -r requirements.txt
-Usage
+
+## Usage
+
 Ensure you have the trained machine learning model file (fish_model.pkl) in the same directory as the app.py script. If the model file is missing, run the Jupyter Notebook (train_model.ipynb) to train the model and generate the required fish_model.pkl file.
 
 Start the Flask development server by running the following command:
