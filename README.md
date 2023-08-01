@@ -30,10 +30,10 @@ Enter the required inputs for the species, length1, length2, length3, height, an
 
 Click on the "Predict" button to submit the form and get the predicted weight of the fish.
 
-Front-end
+## Front-end
 The front-end of the web application is built using HTML and CSS. The index.html file contains the layout and form structure. The CSS styles in the <style> tag within the HTML file (<head>) define the appearance of the elements.
 
-Acknowledgments
+## Acknowledgments
 The machine learning model used for prediction is trained using the scikit-learn library. The Flask web framework is utilized to serve the prediction web application.
 
 Please make sure to update the instructions and description sections as needed, depending on the specific details of your project. Additionally, feel free to add more information, such as licensing, contribution guidelines, and additional acknowledgments, if applicable.
