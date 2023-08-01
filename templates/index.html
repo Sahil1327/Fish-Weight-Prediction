@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fish Weight Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f2f2f2; /* Change the background color to a light gray shade */
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 36px; /* Increase the font size of h1 for a more prominent heading */
+            text-align: center; /* Center the heading */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* Updated styles for textboxes */
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        /* Updated styles for the Predict button */
+        input[type="submit"] {
+            width: 100%;
+            cursor: pointer;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto; /* Center the form horizontally */
+            padding: 20px; 
+            background-color: #fff; /* Add a white background to the form */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+            border-radius: 10px; /* Round the corners of the form */
+        }
+
+        /* Position textboxes side by side */
+        .input-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .input-container label,
+        .input-container input[type="text"] {
+            width: calc(50% - 5px);
+        }
+
+        /* Add media query for better responsiveness */
+        @media screen and (max-width: 600px) {
+            .input-container label,
+            .input-container input[type="text"] {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Fish Weight Prediction</h1>
+    <form action="/predict" method="post">
+        <div class="input-container">
+            <label for="species">Species:</label>
+            <input type="text" id="species" name="species" required>
+            <label for="length1">Length1:</label>
+            <input type="text" id="length1" name="length1" required>
+            <label for="length2">Length2:</label>
+            <input type="text" id="length2" name="length2" required>
+            <label for="length3">Length3:</label>
+            <input type="text" id="length3" name="length3" required>
+            <label for="height">Height:</label>
+            <input type="text" id="height" name="height" required>
+            <label for="width">Width:</label>
+            <input type="text" id="width" name="width" required>
+        </div>
+        <input type="submit" value="Predict">
+    </form>
+    {% if prediction %}
+        <p>Predicted Weight: {{ prediction }}</p>
+    {% endif %}
+    {% if error %}
+        <p class="error">{{ error }}</p>
+    {% endif %}
+</body>
+</html>
